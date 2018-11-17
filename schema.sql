@@ -1,0 +1,2 @@
+-- DROP DATABASE IF EXISTS jems_db;
+CREATE DATABASE jems_db;
