@@ -1,0 +1,40 @@
+{
+  "name": "jems-group-of-4",
+  "version": "1.0.0",
+  "description": "project-2",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esengupta/JEMS-Group-of-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esengupta/JEMS-Group-of-4/issues"
+  },
+  "homepage": "https://github.com/esengupta/JEMS-Group-of-4#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-passport-strategy": "^1.0.1",
+    "cloudinary": "^1.13.2",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "local": "^0.3.3",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-strategy": "^1.0.0",
+    "sequelize": "^4.41.2"
+  },
+  "devDependencies": {}
+}
