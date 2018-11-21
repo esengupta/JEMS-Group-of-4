@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+<title>jamesbook</title>
+</head>
+<body>
+  <div class="topnav">
+   <div class="main-body" id="header-bg">
+     <div class="container">
+       <div class="columns">
+        <div class="the-notebook">
+          <img id="the-notebook" src="image/notebook.PNG" height="75" width="auto" alt="your jamesbook">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+               
+        
+        <div class="nav-container">
+
+            <body>
+
+                <div class="jumbotron">
+                  <h1 class="text-center">Bucket List! - Create an Item</h1>
+                </div>
+            
+                <div class="container">
+            
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="form-group">
+                            <label for="sel1">Categories</label>
+                            <select class="form-control" id="sel1">
+                              <option>Entertainment</option>
+                              <option>Career</option>
+                              <option>Travel</option>
+                              <option>Education</option>
+                              <option>Finances</option>
+                              <option>Social</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                     
+                      <textarea class="form-control" rows="3" id="text-box" placeholder="Enter Bucket Goal Here!"></textarea>
+                      <button id="goal-submit" class="btn btn-lg pull-right">Submit!</button>
+                    </div>
+                  </div>
+            
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <h2>Bucket list</h2>
+                      <hr>
+                      <div id="bucketList-area"></div>
+                    </div>
+                  </div>
+            
+                </div>
+
+
+</div>
+
+
+
+<script type="text/javascript" src="/js/goal.js"></script>
+</body>
+</html>
