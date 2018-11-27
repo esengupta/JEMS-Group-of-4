@@ -1,47 +1,76 @@
-require("dotenv").config();
+// Server.js - This file is the initial starting point for the Node/Express server.
+//// *** Dependencies
+
+
+
 var express = require("express");
-var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
 
-var db = require("./models");
+var session = require("express-session");
+var passport = require("./config/passport");
 
+var flash = require('connect-flash');
+
+// Sets up the Express App
+// =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
+
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// Requiring our models for syncing
+var db = require("./models");
+
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.json());
+
+//Keep an eye on this - may need to be set to 'false'
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+
+
+// Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+
+app.use(flash());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+// =============================================================
+require("./controllers/html-routes.js")(app);
+require("./controllers/api-routes.js")(app);
+require("./controllers/live_chat.js")(io);
+require("./controllers/new_chat.js")(io);
 
-var syncOptions = { force: false };
+require("./controllers/aws-routes.js")(app);
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ /*force: true*/ }).then(function() {
+	http.listen(PORT, function() {
+		console.log("App listening on PORT " + PORT);
+	});
 
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+	require("./controllers/self-timers.js")(io);
 });
 
 module.exports = app;

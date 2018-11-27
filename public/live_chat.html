@@ -1,0 +1,45 @@
+<!-- Website. socket.io. Socket.IO is a JavaScript library for realtime web applications. It enables realtime, bi-directional communication between web clients and servers. It has two parts: a client-side library that runs in the browser, and a server-side library for Node.js. -->
+
+<!-- WebSocket with Socket.IO. ... Socket.IO will use feature detection to decide if the connection will be established with WebSocket, AJAX long polling, Flash, etc., making creating realtime apps that work everywhere a snap. Socket.IO also provides an API for Node.js which looks very much like the client side API. -->
+
+<!-- Socket.IO is an event-based bi-directional communication layer for realtime web applications, built atop Engine.IO. It abstracts many transports, including AJAX long-polling and WebSockets, into a single API. -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="icon" sizes="32x32" href="/img/think_icon.jpg">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  $(function () {
+    var socket = io();
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+    socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
+  });
+</script>
+  </body>
+</html>
+

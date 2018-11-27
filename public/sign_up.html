@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,12 +13,21 @@
     <div class="topnav">
         
         <div class="nav-container">
-          <form action="/action_page.php">
+            <div class="main-body" id="header-bg">
+                <div class="container">
+                  <div class="columns">
+                   <div class="the-notebook">
+                     <img id="the-notebook" src="image/notebook.PNG" height="75" width="auto" alt="your jamesbook">
+                   </div>
+                 </div>
+               </div>
+             </div> -->
+          <!-- <form action="/action_page.php">
             <input type="text" placeholder="Username" name="username">
             <input type="text" placeholder="Password" name="psw">
             <button type="submit">Login</button>
-          </form>
-        </div>
+          </form> -->
+        <!-- </div>
       </div>
     <form action="/action_page.php">
       <div class="container">
@@ -26,15 +35,15 @@
         <p>Please fill in this form to create an account.</p>
         <hr>
     
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="Username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="username" required>
     
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-    
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-        <hr>
+     -->
+        <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
+        <!-- <hr>
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
     
         <button type="submit" class="registerbtn">Register</button>
@@ -44,10 +53,132 @@
         <p>Already have an account? <a href="#">Sign in</a>.</p>
       </div>
     </form>
+
+
+    <footer class= "footer-centered">
+        Lovingly designed and built by : JEMS (Jinwoo park | Enakshi Sengupta | Giselle Mudge | Solomon)
+      </footer>
     
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+ </html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up</title>
+<link rel="icon" sizes="32x32" href="/img/think_icon.jpg">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/lux/bulmaswatch.min.css">
+<!-- style sheet link -->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<!-- font link -->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<section class="hero is-primary is large is bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class=" column is-three-fifths">
+        <div class="title">
+          <img id="the-brain" src="image/jbookLogo.PNG" height="65" width="auto" alt="your jamesbook">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+  <section class="Site-content">
+    <div class="container">
+      <div class="field">
+        <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input id="usernameInput" class="input" type="text" placeholder="Username" value="">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+              <i class="fa fa-check"></i>
+              </span>
+            </div>
+          <p class="help is-danger" id="note"></p>
+        </div>
+      <div class="field">
+        <label class="label">Password</label>
+          <div class="control">
+            <input id="passwordInput" class="input" type="password" placeholder="Password">
+          </div>
+        </div>
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox">
+              I agree to the <a href="" id="open-modal">terms and conditions</a>
+            </input>
+          
+          <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+          <div class="box">
+        <div class="content">
+          <h2> Terms & Conditions: jemsbook </h2>
+          <h2>jemsbook Terms of Service</h2>
+            <h3>1. Terms</h3>
+            <p>Website terms and conditions have a number of functions. They set out the basis upon which a website and the material on a website may be used, and seek to limit or exclude the liability of the website owner. They can also be used as a convenient location for making any disclosures required by law..</p>
+            <h3>2. Use License</h3>
+            <ol type="a">
+            <li>As with any legal contract, both sides, including the user, must agree (“assent”) to the terms and conditions offered with the online service in order to create a legally enforceable “agreement.” ... Yet not all of these techniques are good enough to create legally binding contracts
+            <ol type="i">
+            <li>modify or copy the materials;</li>
+            <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial.)</li>
+            </ol>
+            </li>
+            <li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by The Brain Dump at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li>
+            </ol>
+            <h3>3. Disclaimer</h3>
+            <ol type="a">
+            <li>The information contained in this website is for general information purposes only. The information is provided by [business name] and while we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</li>
+            <li>Every effort is made to keep the website up and running smoothly. However, [business name] takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</li>
+            </ol>
+            <h3>4. Limitations</h3>
+            <p>In no event shall The Brain Dump or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on The Brain Dump's website, even if The Brain Dump or a The Brain Dump authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+            <h3>5. Accuracy of materials</h3>
+            <p>The materials appearing on jemsbook website could include technical, typographical, or photographic errors. jamesbook does not warrant that any of the materials on its website are accurate, complete or current. jamesbook may make changes to the materials contained on its website at any time without notice. However jamesbook does not make any commitment to update the materials.</p>
+            <h3>6. Modifications</h3>
+            <p>jamesbook may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </label>
+</div>
+</div>
+<div class="field is-grouped">
+  <div class="control">
+    <button id="submit" class="button is-link">Submit</button>
+      </div>
+    <div class="control">
+        <button class="button is-text" id="cancelme">Cancel</button>
+    </div>
+</div>
+  <div style="margin-top: 25px">
+    <a href="/login">Existing User? Log In Here</a>
+    </div>
+</div>
+</section>
+<footer class="has-text-centered">
+Lovingly designed and built by: JEMS (Jinwoo park | Enakshi Sengupta | Giselle Mudge | Solomon)
+</footer>
+<script type="text/javascript" src="/js/sign_up.js"></script>
 </body>
 </html>
