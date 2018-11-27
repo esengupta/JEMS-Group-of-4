@@ -30,17 +30,27 @@ body {
   #all {
   background-color: red !important;
   }
-  #life {
+  #Entertainment {
   background-color: red !important;
   }
-  #gaming {
+  #Travel {
   background-color: red !important;
   }
-  #random {
+  #Career {
   background-color: red !important;
   }
-  #funny {
+  #Social {
   background-color: red !important;
+  }
+  #Education {
+  background-color: red !important;
+  }
+
+  #Financel {
+  background-color: red !important;
+  }
+  #ETC {
+   background-color: red !important;
   }
   #user-div {
   margin-top: 1%;
