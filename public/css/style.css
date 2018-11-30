@@ -19,7 +19,7 @@ body {
   height: 90px;
   }
   #color-me {
-  background-color: white
+  background-color: blue
   }
   /*//////////////////*/
   /* Font */
@@ -45,8 +45,7 @@ body {
   #Education {
   background-color: red !important;
   }
-
-  #Financel {
+  #Finance {
   background-color: red !important;
   }
   #ETC {
