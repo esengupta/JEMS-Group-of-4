@@ -4,7 +4,7 @@
 // =============================================================
 var path = require("path");
 var moment = require("moment");
-var isAuthenticated = require("../config/middleware/auth");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 // Requiring our models
 var db = require("../models");
 // Routes
