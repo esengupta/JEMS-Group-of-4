@@ -65,7 +65,9 @@
                       <div class="field">
                         <div class="control">
                         <input id="post-file" type="text" placeholder="" style="width: 500px !important" disabled></input>
-                        <input type="file" id="file-input">
+                        <input name="file" type="file" class="cloudinary-fileupload" data-cloudinary-field="image_id" 
+   data-form-data=" ... upload options as html-escaped JSON data ... " ></input>
+                        {{!-- <input type="file" id="file-input"> --}}
                         <div id="fileview" style="margin-top: 20px"></div>
                        </div>
                     </div>
@@ -91,3 +93,10 @@
         Lovingly designed and built by: JEMS (Jinwoo park | Enakshi Sengupta | Giselle Mudge | Solomon)
       </footer>
       <script type="text/javascript" src="/js/new_post.js"></script>
+      <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
+      <script type="text/javascript"> 
+        $.cloudinary.config({ cloud_name: 'dkyymz4el', api_key: '497728433484362', api_secret: 'PYzi6Of2Kw70GV2C8X4B87lcMH4', secure: true}); 
+          if($.fn.cloudinary_fileupload !== undefined) {
+          $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
+        }
+      </script>

@@ -124,16 +124,30 @@ app.get("/api/comments/:postid", function(req, res) {
 });
 });
 
+
 // POST routes - create
 app.post("/api/posts", function(req, res) {
+
   db.Post.create(req.body).then(function(dbPost) {
-// res.json(dbPost);
-  res.json('/main');
-}).catch(function(err) {
-  res.json(err);
+    // res.json(dbPost);
+    res.json('/main');
+  }).catch(function(err) {
+    res.json(err);
+  });
 });
-});
+
+
 app.post("/api/comments", function(req, res) {
+        /* IF PHOTO/FILE EXISTS */
+        if (files.photo) {
+
+          // upload file to cloudinary, which'll return an object for the new image
+          cloudinary.uploader.upload(files.photo.path, function (result) {
+  
+            console.log(result);
+  
+          });
+        } 
   db.Comment.create(req.body).then(function(dbComment) {
   res.json('/main');
 // res.json(dbComment);

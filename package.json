@@ -33,6 +33,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
     "local": "^0.3.3",
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
