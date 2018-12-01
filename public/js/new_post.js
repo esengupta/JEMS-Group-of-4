@@ -29,7 +29,7 @@ $(document).ready(function() {
       const xhr = new XMLHttpRequest();
       xhr.open('PUT', signedRequest);
       xhr.onreadystatechange = () => {
-          if(xhr.readyState === 4){
+          if(xhr.readyState === 7){
               if(xhr.status === 200){
                   var type = file.type.split('/');
                   switch(type[0]) {
