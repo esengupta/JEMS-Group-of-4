@@ -1,47 +1,47 @@
 $(document).ready(function() {
 
-        $("#all").on("click", function() {
-        location.href = "main";
-        });
-
-        $("#Entertainment-category").on("click", function() {
-        location.href = "Entertainment";
-        });
-
-        $("#Travel-category").on("click", function() {
-         location.href = "Travel";
-        });
-
-        $("#Career-category").on("click", function() {
-       location.href = "Career";
-         });
-
-        $("#Social-category").on("click", function() {
-         location.href = "Social";
-        });
-
-        $("#Education-category").on("click", function() {
-          location.href = "Education";
-        });
-
-        $("#Finance-category").on("click", function() {
-           location.href = "Finance";
-        });
-
-        $("#ETC-category").on("click", function() {
-          location.href = "ETC";
-        });
-
-        $("#go-chat").on("click", function() {
+  $("#all-category").on("click", function() {
+    location.href = "main";
+    });
+   
+    $("#Entertainment-category").on("click", function() {
+      location.href = "Entertainment";
+    });
+  
+    $("#Travel-category").on("click", function() {
+      location.href = "Travel";
+    });
+  
+    $("#Career-category").on("click", function() {
+      location.href = "Career";
+    });
+  
+    $("#Social-category").on("click", function() {
+      location.href = "Social";
+    });
+  
+    $("#Education-category").on("click", function() {
+      location.href = "Education";
+    });
+  
+    $("#Finance-category").on("click", function() {
+      location.href = "Finance";
+    });
+  
+    $("#ETC-category").on("click", function() {
+      location.href = "ETC";
+    });
+  
+    $("#go-chat").on("click", function() {
 	    if (window.showModelessDialog) {        // Internet Explorer
 	        showModelessDialog ("/new_chat.html", window, "dialogWidth:500px; dialogHeight:800px");
 	    }
 	    else {
 	        window.open ("/new_chat.html", "","width=500, height=800px, alwaysRaised=yes");
 	    }
-        });
+    });
 
-        $(".thumbs-up").on("click", function() {
+    $(".thumbs-up").on("click", function() {
         var postid = $(this).attr("data-id");
 
         $.ajax({
@@ -56,9 +56,9 @@ $(document).ready(function() {
         }).catch(function(err) {
             console.log(err.responseJSON);
         });
-        });
+    });
 
-        $(".thumbs-down").on("click", function() {
+    $(".thumbs-down").on("click", function() {
         var postid = $(this).attr("data-id");
 
         $.ajax({
@@ -73,15 +73,15 @@ $(document).ready(function() {
         }).catch(function(err) {
             console.log(err.responseJSON);
         });
-        });
+    });
 
-        var socket = io();
-        socket.on('timer message', function(msg){
+    var socket = io();
+    socket.on('timer message', function(msg){
     	console.log(msg);
     	location.reload();
-        });
+    });
 
-        $(".post-file").each(function(){
+    $(".post-file").each(function(){
         var url = $(this).attr("src");
         var postid = $(this).attr("data-id");
 

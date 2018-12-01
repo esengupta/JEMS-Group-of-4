@@ -51,10 +51,10 @@ id: post.id
 }
 }
 ).then(function(dbPost) {
-logToFile("UPDATE (Enough-Likes)", JSON.stringify(post, null, 4), "Success");
+logToFile("UPDATE (Enough-Likes)", JSON.stringify(post, null, 7), "Success");
 io.emit('timer message', "UPDATE (Enough-Likes)");
 }).catch(function(err) {
-logToFile("UPDATE (Enough-Likes)", JSON.stringify(post, null, 4), "Failure");
+logToFile("UPDATE (Enough-Likes)", JSON.stringify(post, null, 7), "Failure");
 });
 }
 }
@@ -75,13 +75,13 @@ where: {
 id: post.id
 }
 }).then(function(delCnt) {
-logToFile(title, JSON.stringify(post, null, 4), "Success");
+logToFile(title, JSON.stringify(post, null, 7), "Success");
 io.emit('timer message', title);
 }).catch(function(err) {
-logToFile(title, JSON.stringify(post, null, 4), "Failure to delete this");
+logToFile(title, JSON.stringify(post, null, 7), "Failure to delete this");
 });
 }).catch(function(err) {
-logToFile(title, JSON.stringify(post, null, 4), "Failure to delete comments");
+logToFile(title, JSON.stringify(post, null, 7), "Failure to delete comments");
 });
 }
 function logToFile(title, body, result) {

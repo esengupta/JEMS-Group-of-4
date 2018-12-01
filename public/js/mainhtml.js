@@ -20,7 +20,7 @@ $(document).ready(function() {
     location.href = "Social";
   });
 
-  $("#Educationry-category").on("click", function() {
+  $("#Education-category").on("click", function() {
     location.href = "Education";
   });
 
