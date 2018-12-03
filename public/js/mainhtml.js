@@ -101,6 +101,7 @@ $(document).ready(function() {
                     $("#fileview_" + postid).empty();
                     $("#fileview_" + postid).append(audio);
                     break;
+                    
                 case "mp4":
                     var video = $("<video controls>");
                     video.attr("style", "max-width: 250px");

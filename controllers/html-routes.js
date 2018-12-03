@@ -73,7 +73,7 @@ app.get("/comments", isAuthenticated, function(req, res) {
 res.render("comments", {});
 // res.sendFile(path.join(__dirname, "../public/comments.html"));
 });
-app.get("all", isAuthenticated, function(req, res) {
+app.get("/all", isAuthenticated, function(req, res) {
   db.User.findAll({}).then(function(dbUser) {
   db.Post.findAll({
   order: [['createdAt', 'DESC']],

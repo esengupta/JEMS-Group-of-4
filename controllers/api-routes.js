@@ -10,7 +10,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the main page.
-  // Otherwise the user will be sent an errorz
+  // Otherwise the user will be sent an error
 app.post("/api/login", passport.authenticate("local", {
     failureRedirect: '/login-failureRedirect',
     failureFlash: true
@@ -85,6 +85,8 @@ app.get("/api/posts", function(req, res) {
   db.Post.findAll({
   include: [db.Comment]
 }).then(function(dbPost) {
+
+  //CHECK FOR EXPIRATION + AUTO DELETE AFTER 24h
   res.json(dbPost);
 });
 });
@@ -139,15 +141,15 @@ app.post("/api/posts", function(req, res) {
 
 app.post("/api/comments", function(req, res) {
         /* IF PHOTO/FILE EXISTS */
-        if (files.photo) {
+        // if (files.photo) {
 
-          // upload file to cloudinary, which'll return an object for the new image
-          cloudinary.uploader.upload(files.photo.path, function (result) {
+        //   // upload file to cloudinary, which'll return an object for the new image
+        //   cloudinary.uploader.upload(files.photo.path, function (result) {
   
-            console.log(result);
+        //     console.log(result);
   
-          });
-        } 
+        //   });
+        // } 
   db.Comment.create(req.body).then(function(dbComment) {
   res.json('/main');
 // res.json(dbComment);

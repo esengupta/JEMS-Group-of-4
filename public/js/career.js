@@ -96,16 +96,19 @@ $(document).ready(function() {
                     audio.attr("style", "max-width: 250px");
                     var source = $("<source>");
                     source.attr("src", url);
+                    
                     // source.attr("type", file.type);
                     audio.append(source);
                     $("#fileview_" + postid).empty();
                     $("#fileview_" + postid).append(audio);
                     break;
+
                 case "mp4":
                     var video = $("<video controls>");
                     video.attr("style", "max-width: 250px");
                     var source = $("<source>");
                     source.attr("src", url);
+
                     // source.attr("type", file.type);
                     video.append(source);
                     $("#fileview_" + postid).empty();
