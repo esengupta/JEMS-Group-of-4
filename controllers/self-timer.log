@@ -1,0 +1,48 @@
+[2018-12-04T19:38:09-05:00] DELETE (End-of-life)
+{
+    "id": 11,
+    "body": "social work",
+    "category": "Social",
+    "file_location": "",
+    "timeout": 24,
+    "shared": false,
+    "like_count": 1,
+    "dislike_count": 1,
+    "extended": false,
+    "createdAt": "2018-12-02T22:58:16.000Z",
+    "updatedAt": "2018-12-02T22:58:32.000Z",
+    "UserId": 1
+}
+=> Success
+[2018-12-04T19:38:09-05:00] DELETE (End-of-life)
+{
+    "id": 13,
+    "body": "testing1",
+    "category": "Finance",
+    "file_location": "",
+    "timeout": 24,
+    "shared": false,
+    "like_count": 1,
+    "dislike_count": 1,
+    "extended": false,
+    "createdAt": "2018-12-03T01:14:28.000Z",
+    "updatedAt": "2018-12-03T07:59:31.000Z",
+    "UserId": 1
+}
+=> Success
+[2018-12-04T19:38:09-05:00] DELETE (End-of-life)
+{
+    "id": 12,
+    "body": "testing",
+    "category": "Entertainment",
+    "file_location": "",
+    "timeout": 24,
+    "shared": false,
+    "like_count": 1,
+    "dislike_count": 1,
+    "extended": false,
+    "createdAt": "2018-12-03T00:45:47.000Z",
+    "updatedAt": "2018-12-03T00:45:58.000Z",
+    "UserId": 1
+}
+=> Success
